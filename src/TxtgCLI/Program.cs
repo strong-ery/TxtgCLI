@@ -47,10 +47,16 @@ class Program
 
         rootCommand.SetAction((Func<ParseResult, int>)(parseResult =>
         {
-            OperationType? operationType = parseResult.GetValue(operationTypeOption);
-            string? inputFolder = parseResult.GetValue(inputFolderOption);
-            string? outputFolder = parseResult.GetValue(outputFolderOption);
+            OperationType operationType = parseResult.GetValue(operationTypeOption);
+            string inputFolder = parseResult.GetValue(inputFolderOption);
+            string outputFolder = parseResult.GetValue(outputFolderOption);
             OutputQuality? outputQuality = parseResult.GetValue(outputQualityOption);
+            
+            if (string.IsNullOrWhiteSpace(inputFolder) || string.IsNullOrWhiteSpace(outputFolder))
+            {
+                Console.WriteLine("Input and output folder paths must be provided.");
+                return 1;
+            }
 
             switch (operationType)
             {
@@ -58,6 +64,8 @@ class Program
                     return 0;
 
                 case OperationType.Extract:
+                    ExtractorOrchestrator extractor = new ExtractorOrchestrator();
+                    extractor.Extract(inputFolder, outputFolder, outputQuality ?? OutputQuality.Automatic);
                     return 0;
 
                 default:
