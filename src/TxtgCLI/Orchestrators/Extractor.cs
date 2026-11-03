@@ -24,7 +24,7 @@ public class ExtractorOrchestrator
         {
             var fileName = _fsHelpers.StripFileToRawName(file);
 
-            Console.WriteLine($"Extracting {fileName} to {outputFolder} with quality: {outputQuality}");
+            Console.WriteLine($"Extracting {fileName}.txtg to {outputFolder} with quality: {outputQuality}");
             // var fileExtension = _fsHelpers.StripToFileExtension(file); - not needed for the extractor, but the converter will need it to determine the output format (PNG or DDS)
             TxtgFile txtgFile = TxtgFile.FromFile(file);
 
