@@ -1,0 +1,3 @@
+[submodule "vendor/TxtgSharp"]
+	path = vendor/TxtgSharp
+	url = https://github.com/BladesawStudios/TxtgSharp
