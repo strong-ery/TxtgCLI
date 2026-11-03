@@ -48,8 +48,8 @@ class Program
         rootCommand.SetAction((Func<ParseResult, int>)(parseResult =>
         {
             OperationType operationType = parseResult.GetValue(operationTypeOption);
-            string inputFolder = parseResult.GetValue(inputFolderOption);
-            string outputFolder = parseResult.GetValue(outputFolderOption);
+            string? inputFolder = parseResult.GetValue(inputFolderOption);
+            string? outputFolder = parseResult.GetValue(outputFolderOption);
             OutputQuality? outputQuality = parseResult.GetValue(outputQualityOption);
             
             if (string.IsNullOrWhiteSpace(inputFolder) || string.IsNullOrWhiteSpace(outputFolder))
