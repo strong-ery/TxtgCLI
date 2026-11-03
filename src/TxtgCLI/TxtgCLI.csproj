@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\vendor\TxtgSharp\src\TxtgSharp\TxtgSharp.csproj" />
+    <ProjectReference Include="..\..\vendor\TexSharp\src\TexSharp\TexSharp.csproj" />
   </ItemGroup>
 
   <ItemGroup>
