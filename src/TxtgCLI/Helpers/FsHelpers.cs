@@ -21,4 +21,14 @@ public class FsHelpers
             return new string[0];
         }
     }
+
+    public string StripFileToRawName(string filePath)
+    {
+        return Path.GetFileName(filePath);
+    }
+
+    public string StripToFileExtension(string filePath)
+    {
+        return Path.GetExtension(filePath);
+    }
 }
