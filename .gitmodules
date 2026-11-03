@@ -1,3 +1,6 @@
 [submodule "vendor/TxtgSharp"]
 	path = vendor/TxtgSharp
 	url = https://github.com/BladesawStudios/TxtgSharp
+[submodule "vendor/TexSharp"]
+	path = vendor/TexSharp
+	url = https://github.com/BladesawStudios/TexSharp/
