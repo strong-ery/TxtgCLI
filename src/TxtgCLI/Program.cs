@@ -15,7 +15,7 @@ class Program
         };
         var inputFolderOption = new Option<string>("-i", "--input" )
         {
-           Description = "Input folder containing PNG/DDS files to convert.",
+           Description = "Input folder containing PNG/DDS/TXTG files to convert/extract.",
            Required = true
         };
 
@@ -27,7 +27,7 @@ class Program
 
         var outputQualityOption = new Option<OutputQuality>("-q", "--quality" )
         {
-            Description = "Output quality for converted TXTG files. Automatic will select the quality based on the filename postfixes + other image data. (default: Automatic)",
+            Description = "Output quality for converted TXTG files, or exported texture files (PNG is low, DDS is high, automatic chooses low to save storage, high is recommended for edits). Automatic will select the quality based on the filename postfixes + other image data. (default: Automatic)",
             Required = false
         };
 
