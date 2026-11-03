@@ -24,7 +24,7 @@ public class FsHelpers
 
     public string StripFileToRawName(string filePath)
     {
-        return Path.GetFileName(filePath);
+        return Path.GetFileNameWithoutExtension(filePath);
     }
 
     public string StripToFileExtension(string filePath)
