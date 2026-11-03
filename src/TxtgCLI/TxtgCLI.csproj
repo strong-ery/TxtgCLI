@@ -16,6 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="..\..\res\derpylink.txt" />
+    <EmbeddedResource Include="..\..\res\derpylink.txt" Condition="Exists('..\..\res\derpylink.txt')" />
   </ItemGroup>
 </Project>
